@@ -3,10 +3,46 @@ body {
   margin: 0;
   padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #242424; /* Fondo oscuro global */
-  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f1419; /* fondo oscuro */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 #app {
   width: 100%;
+}
+
+:root {
+	/* Paleta */
+	--bg-900: #0f1419;
+	--bg-800: #12181f;
+	--primary-900: #1a2332; /* azul marino */
+	--accent: #dc2626; /* rojo logo */
+	--muted-white: rgba(255,255,255,0.87);
+
+	/* Sizing */
+	--logo-max-width: 1200px;
+	--logo-padding-lg: 5rem;
+
+	/* Shadows */
+	--logo-shadow-1: 0 10px 60px rgba(0,0,0,0.4);
+	--logo-shadow-accent: 0 0 40px rgba(220,38,38,0.5);
+}
+
+/* Respect user motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility: visually hidden (for accessibility) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
